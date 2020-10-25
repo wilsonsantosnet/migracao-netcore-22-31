@@ -1,0 +1,157 @@
+﻿<div class="gc-table-responsive pre-scrollable">
+<table class="table table-striped table-app">
+    <thead class="thead-inverse">
+    <tr>
+        <th width="1" class="text-center">Ações</th>
+        <th class="text-nowrap">
+          <span class="table-sort">
+            {{ vm.infos | traduction: 'name' }}
+            <a href='#' (click)='onOrderBy($event,"name")'><i class="fa fa-sort" aria-hidden="true"></i></a>
+          </span>
+        </th>
+        <th class="text-nowrap">
+          <span class="table-sort">
+            {{ vm.infos | traduction: 'descricao' }}
+            <a href='#' (click)='onOrderBy($event,"descricao")'><i class="fa fa-sort" aria-hidden="true"></i></a>
+          </span>
+        </th>
+        <th class="text-nowrap">
+          <span class="table-sort">
+            {{ vm.infos | traduction: 'tags' }}
+            <a href='#' (click)='onOrderBy($event,"tags")'><i class="fa fa-sort" aria-hidden="true"></i></a>
+          </span>
+        </th>
+        <th class="text-nowrap">
+          <span class="table-sort">
+            {{ vm.infos | traduction: 'fileName' }}
+            <a href='#' (click)='onOrderBy($event,"fileName")'><i class="fa fa-sort" aria-hidden="true"></i></a>
+          </span>
+        </th>
+        <th class="text-nowrap">
+          <span class="table-sort">
+            {{ vm.infos | traduction: 'datetime' }}
+            <a href='#' (click)='onOrderBy($event,"datetime")'><i class="fa fa-sort" aria-hidden="true"></i></a>
+          </span>
+        </th>
+        <th class="text-nowrap">
+          <span class="table-sort">
+            {{ vm.infos | traduction: 'sampleTypeId' }}
+            <a href='#' (click)='onOrderBy($event,"sampleTypeId")'><i class="fa fa-sort" aria-hidden="true"></i></a>
+          </span>
+        </th>
+        <th class="text-nowrap">
+          <span class="table-sort">
+            {{ vm.infos | traduction: 'age' }}
+            <a href='#' (click)='onOrderBy($event,"age")'><i class="fa fa-sort" aria-hidden="true"></i></a>
+          </span>
+        </th>
+        <th class="text-nowrap">
+          <span class="table-sort">
+            {{ vm.infos | traduction: 'category' }}
+            <a href='#' (click)='onOrderBy($event,"category")'><i class="fa fa-sort" aria-hidden="true"></i></a>
+          </span>
+        </th>
+        <th class="text-nowrap">
+          <span class="table-sort">
+            {{ vm.infos | traduction: 'ativo' }}
+            <a href='#' (click)='onOrderBy($event,"ativo")'><i class="fa fa-sort" aria-hidden="true"></i></a>
+          </span>
+        </th>
+    </tr>
+    <tr>
+        <th width="1" class="text-center"></th>
+        <th>
+          <span class="table-sort">
+            <grid-filter [(vm)]="vm" [show]="true"  [pagination]="false" [navigationProp]="''" [type]="'string'" [fieldName]="'name'" (filter)="onFilter($event)"></grid-filter>
+          </span>
+        </th>
+        <th>
+          <span class="table-sort">
+            <grid-filter [(vm)]="vm" [show]="true"  [pagination]="false" [navigationProp]="''" [type]="'string'" [fieldName]="'descricao'" (filter)="onFilter($event)"></grid-filter>
+          </span>
+        </th>
+        <th>
+          <span class="table-sort">
+            <grid-filter [(vm)]="vm" [show]="true"  [pagination]="false" [navigationProp]="''" [type]="'string'" [fieldName]="'tags'" (filter)="onFilter($event)"></grid-filter>
+          </span>
+        </th>
+        <th>
+          <span class="table-sort">
+            <grid-filter [(vm)]="vm" [show]="true"  [pagination]="false" [navigationProp]="''" [type]="'string'" [fieldName]="'fileName'" (filter)="onFilter($event)"></grid-filter>
+          </span>
+        </th>
+        <th>
+          <span class="table-sort">
+            <grid-filter [(vm)]="vm" [show]="true"  [pagination]="false" [navigationProp]="''" [type]="'DateTime?'" [fieldName]="'datetime'" (filter)="onFilter($event)"></grid-filter>
+          </span>
+        </th>
+        <th>
+          <span class="table-sort">
+            <grid-filter [(vm)]="vm" [show]="true"  [pagination]="false" [navigationProp]="'SampleType'" [type]="'int'" [fieldName]="'sampleTypeId'" (filter)="onFilter($event)"></grid-filter>
+          </span>
+        </th>
+        <th>
+          <span class="table-sort">
+            <grid-filter [(vm)]="vm" [show]="true"  [pagination]="false" [navigationProp]="''" [type]="'int?'" [fieldName]="'age'" (filter)="onFilter($event)"></grid-filter>
+          </span>
+        </th>
+        <th>
+          <span class="table-sort">
+            <grid-filter [(vm)]="vm" [show]="true"  [pagination]="false" [navigationProp]="''" [type]="'int?'" [fieldName]="'category'" (filter)="onFilter($event)"></grid-filter>
+          </span>
+        </th>
+        <th>
+          <span class="table-sort">
+            <grid-filter [(vm)]="vm" [show]="true"  [pagination]="false" [navigationProp]="''" [type]="'bool?'" [fieldName]="'ativo'" (filter)="onFilter($event)"></grid-filter>
+          </span>
+        </th>
+    <tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of vm.filterResult">
+
+        <td class="text-center text-nowrap">
+        <button (click)="onEdit($event, item)"  placement="top" title="Editar" class="btn btn-sm btn-primary">
+            <i class="icon icon-pencil"></i>
+        </button>
+        <button (click)="onDetails($event, item)"  placement="top" title="Detalhes" class="btn btn-sm btn-default">
+            <i class="icon icon-info"></i>
+        </button>
+        <button (click)="onPrint($event, item)"  placement="top" title="Imprimir" class="btn btn-sm btn-default">
+            <i class="icon icon-printer"></i>
+        </button>
+        <button (click)="onDeleteConfimation($event, item)" placement="top" title="Excluir" class="btn btn-sm btn-danger">
+            <i class="icon icon-trash"></i>
+        </button>
+        </td>
+        <td>
+          <bind-custom [model]="item.name" [format]="'string'" [tag]="'span'" ></bind-custom>
+        </td>
+        <td>
+          <bind-custom [model]="item.descricao" [format]="'string'" [tag]="'span'" ></bind-custom>
+        </td>
+        <td>
+          <bind-custom [model]="item.tags" [format]="'string'" [tag]="'span'" ></bind-custom>
+        </td>
+        <td>
+          <bind-custom [model]="item.fileName" [format]="'string'" [tag]="'span'" ></bind-custom>
+        </td>
+        <td>
+          <bind-custom [model]="item.datetime" [format]="'DateTime?'" [tag]="'span'" ></bind-custom>
+        </td>
+        <td>
+          <bind-custom [model]="item.sampleTypeId" [format]="'int'" [tag]="'span'" ></bind-custom>
+        </td>
+        <td>
+          <bind-custom [model]="item.age" [format]="'int?'" [tag]="'span'" ></bind-custom>
+        </td>
+        <td>
+          <bind-custom [model]="item.category" [format]="'int?'" [tag]="'span'" ></bind-custom>
+        </td>
+        <td>
+          <bind-custom [model]="item.ativo" [format]="'bool?'" [tag]="'span'" ></bind-custom>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</div>

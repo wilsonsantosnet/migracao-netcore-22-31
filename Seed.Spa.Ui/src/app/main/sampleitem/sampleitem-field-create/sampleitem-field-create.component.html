@@ -1,0 +1,18 @@
+﻿<div class="row " [formGroup]="vm.form">
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'name' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.name' name='name' required formControlName='name'    maxlength=150 autocomplete='off'/>
+    </div>
+  </section>
+
+  <section class="col-md-12"   *ngIf="!vm.isParent || vm.ParentIdField != 'sampleId'">
+    <div class='form-group'>
+      <label class='mr-1'>{{ vm.infos | traduction:'sampleId' }}</label> 
+        <select class='form-control'  name='sampleId' [(ngModel)]='vm.model.sampleId' required formControlName='sampleId' datasource [dataitem]="'Sample'" [fieldFilterName]="'Name'"  ></select>
+      </div>
+        
+  </section>
+
+</div>
+

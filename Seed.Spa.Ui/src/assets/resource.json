@@ -1,0 +1,165 @@
+[
+  {
+    "group": "Geral",
+    "culture": "en-US",
+    "key": "nova",
+    "value": "New"
+  },
+  {
+    "group": "Geral",
+    "culture": "en-US",
+    "key": "buscar",
+    "value": "Search"
+  },
+  {
+    "group": "Geral",
+    "culture": "en-US",
+    "key": "voltar",
+    "value": "Come Back"
+  },
+  {
+    "group": "Geral",
+    "culture": "en-US",
+    "key": "editarItem",
+    "value": "Edit Item"
+  },
+  {
+    "group": "Geral",
+    "culture": "en-US",
+    "key": "abrir",
+    "value": "Open"
+  },
+  {
+    "group": "Geral",
+    "culture": "en-US",
+    "key": "titulo",
+    "value": "Title"
+  },
+  {
+    "group": "Geral",
+    "culture": "en-US",
+    "key": "totalRegistro",
+    "value": "Total"
+  },
+  {
+    "group": "Geral",
+    "culture": "en-US",
+    "key": "proximo",
+    "value": "Near"
+  },
+  {
+    "group": "Geral",
+    "culture": "en-US",
+    "key": "anterior",
+    "value": "Previous"
+  },
+  {
+    "group": "Geral",
+    "culture": "en-US",
+    "key": "filtrar",
+    "value": "Filter"
+  },
+  {
+    "group": "Geral",
+    "culture": "en-US",
+    "key": "salvar",
+    "value": "Save"
+  },
+  {
+    "group": "Geral",
+    "culture": "en-US",
+    "key": "cancelar",
+    "value": "Cancel"
+  },
+  {
+    "group": "Geral",
+    "culture": "en-US",
+    "key": "sim",
+    "value": "Yes"
+  },
+  {
+    "group": "Geral",
+    "culture": "en-US",
+    "key": "imprimir",
+    "value": "Print"
+  },
+  {
+    "group": "Geral",
+    "culture": "en-US",
+    "key": "procurar",
+    "value": "Search"
+  },
+  {
+    "group": "Geral",
+    "culture": "en-US",
+    "key": "excluir",
+    "value": "delete"
+  },
+  {
+    "group": "Geral",
+    "culture": "en-US",
+    "key": "limpar",
+    "value": "Clear"
+  },
+  {
+    "group": "Geral",
+    "culture": "en-US",
+    "key": "importar",
+    "value": "import"
+  },
+  {
+    "group": "Geral",
+    "culture": "en-US",
+    "key": "filtro",
+    "value": "Filters"
+  },
+  {
+    "group": "Geral",
+    "culture": "en-US",
+    "key": "novoItem",
+    "value": "New Item"
+  },
+  {
+    "group": "Sample",
+    "culture": "en-US",
+    "key": "name",
+    "value": "name"
+  },
+  {
+    "group": "Sample",
+    "culture": "en-US",
+    "key": "fileName",
+    "value": "File"
+  },
+  {
+    "group": "Sample",
+    "culture": "en-US",
+    "key": "datetime",
+    "value": "Date & Time"
+  },
+  {
+    "group": "Sample",
+    "culture": "en-US",
+    "key": "sampleTypeId",
+    "value": "Type"
+  },
+  {
+    "group": "Sample",
+    "culture": "en-US",
+    "key": "age",
+    "value": "Age"
+  },
+  {
+    "group": "Sample",
+    "culture": "en-US",
+    "key": "category",
+    "value": "Category"
+  },
+  {
+    "group": "Sample",
+    "culture": "en-US",
+    "key": "ativo",
+    "value": "Active"
+  }
+]
+
