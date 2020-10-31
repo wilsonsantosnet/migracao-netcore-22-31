@@ -430,6 +430,8 @@ export class ApiService<T> {
       this.router.navigate(["/unauthorized"]);
     }
 
+
+    console.log("errorResult", response);
     let _response = response.json();
     let erros = "ocorreu um erro!";
     if (_response.result != null) {

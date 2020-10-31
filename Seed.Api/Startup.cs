@@ -16,6 +16,7 @@ using Seed.CrossCuting;
 using Seed.Data.Context;
 using System.Globalization;
 using System.Linq;
+using System.Text.Json;
 
 namespace Seed.Api
 {
@@ -40,21 +41,16 @@ namespace Seed.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //Camelcase para json
-            // TODO : MIGRAÇÃO PROBLEMA 01
-
-            //services.AddMvc()
-            //.AddJsonOptions(options =>
-            //{
-            //    options.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver();
-            //});
-
-            services.AddControllers(options =>
+            
+            services.AddControllers().AddJsonOptions(options =>
             {
-                options.ModelBinderProviders.Insert(0, new DateTimePtBrModelBinderProvider());
-                options.ModelBinderProviders.Insert(1, new NumberModelBinderProvider());
-                //options.InputFormatters.Insert(0,new RawRequestBodyFormatter());
-            });
+                options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+                options.JsonSerializerOptions.IgnoreNullValues = true;
+                options.JsonSerializerOptions.WriteIndented = false;
+                options.JsonSerializerOptions.AllowTrailingCommas = true;
+                options.JsonSerializerOptions.Converters.Add(new StringJsonConverter());
+            }); 
+
 
             services.AddDbContext<DbContextSeed>(
              options => options.UseSqlServer(

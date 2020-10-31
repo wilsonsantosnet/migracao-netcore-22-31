@@ -71,7 +71,7 @@ namespace Common.API.Extensions
         private static string DefineControllerName(AuthorizationHandlerContext source)
         {
             //return ((ControllerActionDescriptor)((ActionContext)source.Resource).ActionDescriptor).ControllerName;
-            return ((Microsoft.AspNetCore.Routing.RouteEndpoint)source.Resource).RoutePattern.RawText.Split("/").LastOrDefault();
+            return ((Microsoft.AspNetCore.Routing.RouteEndpoint)source.Resource).RoutePattern.RawText.Replace("/{id}","").Split("/").LastOrDefault();
         }
 
 
